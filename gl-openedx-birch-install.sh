@@ -1,10 +1,28 @@
 #!/bin/bash
 
-echo "OpenEdx Automated Installation Script"
-echo "Author: Galoget Latorre"
-echo "Organization: Hackem Research Group"
-echo "Creation Date: April 25, 2015"
-echo "Version: 1.0.0"
+echo '*******************************************************************'
+echo '*                                                                 *'
+echo '*         _ __  __  This script allows you to install Open edX    *'
+echo '*   _   _| |\ \/ /  in an easy and automated way!!  =D            *'
+echo '* / -_) _` | >  <   This program is distributed in the hope that  *'
+echo '* \___\__,_|/_/\_\  it will be useful, but WITHOUT ANY WARRANTY,  *'
+echo '*                   please check the LICENSE for more details.    *'
+echo '*                                                                 *'
+echo '* The author do not take any responsibility for any damage        *'
+echo '* (or loss of data) caused through use of this script, be it      *'
+echo '* indirect, special, incidental or consequential damages          *'
+echo '* (including but not limited to damages for loss of business,     *'
+echo '* loss of profits, interruption or the like).                     *'
+echo '*                                                                 *'
+echo '* Open edX Automated Installation Script                          *'
+echo '* Author: Galoget Latorre                                         *'
+echo '* Organization: Hackem Research Group                             *'
+echo '* Creation Date: April 25, 2015                                   *'
+echo '* Last Release: May 11, 2015                                      *'
+echo '* Version: 1.0.1                                                  *'
+echo '*                                                                 *'
+echo '*******************************************************************'
+
 
 #Replace software sources from EC to US
 sudo sed -i 's/ec.archive/us.archive/g' /etc/apt/sources.list
@@ -36,9 +54,9 @@ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb
 sudo dpkg -i vagrant_1.7.2_x86_64.deb
 rm vagrant_1.7.2_x86_64.deb
 
-#In some distributions you can use the following commands to install VirtualBox and Vagrant with apt-get
+#In some distributions you can use the following commands to install VirtualBox and Vagrant with apt-get:
 #Installing VirtualBox, DKMS and Vagrant
-#sudo apt-get install virtualbox-4.3 virtualbox-dkms -y
+#sudo apt-get install virtualbox-4.3 virtualbox-dkms -y  ##WARNING, Check the minimun version of the packages required for Open edX
 #sudo apt-get install vagrant -y
 
 #Set OPENEDX_RELEASE variable - Before installing the Vagrant box, you must set the value of the OPENEDX_RELEASE environment variable to the Git tag for the Birch release:
